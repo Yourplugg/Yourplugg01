@@ -7,78 +7,86 @@
 
 const producten = {
   kleding: [
-    {
-      name: "Oversized Hoodie – Zwart",
-      size: "S / M / L / XL",
-      price: "€59,99",
-      image: "" // bijv. "images/hoodie-zwart.jpg"
-    },
-    {
-      name: "Cargo Broek – Groen",
-      size: "M / L / XL",
-      price: "€74,99",
-      image: ""
-    },
-    {
-      name: "Graphic Tee – Wit",
-      size: "S / M / L",
-      price: "€29,99",
-      image: ""
-    },
-    {
-      name: "Puffer Jacket – Navy",
-      size: "M / L / XL ",
-      price: "€119,99",
-      image: ""
-    }
+
   ],
 
   schoenen: [
     {
-      name: "Chunky Sneaker – Wit/Grijs",
+      name: "Sneaker – Wit/Rood",
+      size: "38",
+      price: "€149,99",
+          image: "1.jpeg"
+    },
+    {
+      name: "Low-Top Suede – Zwart/Wit",
       size: "40 / 41 / 42 / 43 / 44 / 45",
+      price: "€149,99",
+      image: "2.jpeg"
+    },
+    {
+      name: "Sporty Sneaker – Zwart",
+      size: "41",
       price: "€89,99",
-          image: "images/garvani.jpg"
+      image: "3.jpeg"
+    },
+        {
+      name: "Low-Top – Bruin/Wit",
+      size: "39 / 45",
+      price: "€139,99",
+      image: "5.jpeg"
     },
     {
-      name: "Low-Top Suede – Camel",
-      size: "39 / 40 / 41 / 42 / 43",
+      name: "Sporty Sneaker – Grijs",
+      size: "41.5",
       price: "€79,99",
-      image: ""
+      image: "6.jpeg"
     },
     {
-      name: "High-Top Canvas – Zwart",
-      size: "38 / 39 / 40 / 41 / 42",
-      price: "€64,99",
-      image: ""
-    }
+      name: "Chunky Sneaker – Zwart",
+      size: "40 / 44",
+      price: "€129,99",
+      image: "7.jpeg"
+    },
+    {
+      name: "Sneakers – Blauw/Groen",
+      size: "43 / 42.5",
+      price: "€79,99",
+      image: "8.jpeg"
+    },
+    {
+      name: "Low-Top – Zwart",
+      size: "42",
+      price: "€139,99",
+      image: "9.jpeg"
+    },
+    {
+      name: "Chunky Sneaker – Wit",
+      size: "44",
+      price: "€79,99",
+      image: "10.jpeg"
+    },
+    {
+      name: "Sporty Sneaker – Grijs",
+      size: "44",
+      price: "€79,99",
+      image: "11.jpeg"
+    },
+    {
+      name: "Low-Top – Zwart/Wit",
+      size: "43",
+      price: "€129,99",
+      image: "12.jpeg"
+    },
   ],
 
   accessoires: [
     {
-      name: "Snapback Cap – Zwart",
+      name: "Crossbody bag – Zwart",
       size: "One Size",
-      price: "€24,99",
-      image: ""
+      price: "€89,99",
+      image: "4.jpeg"
     },
-    {
-      name: "Crossbody Bag – Bruin",
-      size: "One Size",
-      price: "€39,99",
-      image: ""
-    },
-    {
-      name: "Beanie – Grijs",
-      size: "One Size",
-      price: "€19,99",
-      image: ""
-    },
-    {
-      name: "Bucket Hat – Creme",
-      size: "S/M – L/XL",
-      price: "€22,99",
-      image: ""
-    }
+    
   ]
 };
 
