@@ -61,8 +61,8 @@ const producten = {
     },
     {
       name: "Chunky Sneaker – Wit",
-      size: "44",
-      price: "€79,99",
+      size: "37 38 / 43",
+      price: "€139,99",
       image: "10.jpeg"
     },
     {
