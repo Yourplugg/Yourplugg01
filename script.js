@@ -86,6 +86,18 @@ const producten = {
       price: "€89,99",
       image: "4.jpeg"
     },
+    {
+      name: "Handtassen – Diverse Kleuren",
+      size: "One Size",
+      price: "€59,99",
+      image: "a.jpeg"
+    },
+    {
+      name: "Petten – Diverse Kleuren",
+      size: "One Size",
+      price: "€49,99",
+      image: "b.jpeg"
+    },
     
   ]
 };
