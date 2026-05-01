@@ -9,19 +9,19 @@ const producten = {
   kleding: [
     {
       name: "Jacket – Zwart",
-      size: "S / M (valt kleiner)",
+      size: "S / M",
       price: "€84,99",
           image: "j.jpeg"
     },
     {
       name: "Jacket – Blauw",
-      size: "S / M (valt kleiner)",
+      size: "S / M",
       price: "€84,99",
           image: "k.jpeg"
     },
     {
       name: "Jacket – Créme",
-      size: "S / M (valt kleiner)",
+      size: "S / M",
       price: "€84,99",
           image: "i.jpeg"
     },
@@ -42,12 +42,6 @@ const producten = {
       size: "S",
       price: "€119,99",
           image: "f.jpeg"
-    },
-    {
-      name: "Tracksuit – Grijs",
-      size: "S",
-      price: "€119,99",
-          image: "e.jpeg"
     },
     {
       name: "Vest – Grijs",
