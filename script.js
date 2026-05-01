@@ -7,6 +7,55 @@
 
 const producten = {
   kleding: [
+    {
+      name: "Jacket – Zwart",
+      size: "S / M (valt kleiner)",
+      price: "€84,99",
+          image: "j.jpeg"
+    },
+    {
+      name: "Jacket – Blauw",
+      size: "S / M (valt kleiner)",
+      price: "€84,99",
+          image: "k.jpeg"
+    },
+    {
+      name: "Jacket – Créme",
+      size: "S / M (valt kleiner)",
+      price: "€84,99",
+          image: "i.jpeg"
+    },
+    {
+      name: "Jacket – Zwart",
+      size: "M",
+      price: "€79,99",
+          image: "h.jpeg"
+    },
+    {
+      name: "Trainingspak – Blauw",
+      size: "S",
+      price: "€99,99",
+          image: "g.jpeg"
+    },
+    {
+      name: "Tracksuit – Grijs",
+      size: "S",
+      price: "€119,99",
+          image: "f.jpeg"
+    },
+    {
+      name: "Tracksuit – Grijs",
+      size: "S",
+      price: "€119,99",
+          image: "e.jpeg"
+    },
+    {
+      name: "Vest – Grijs",
+      size: "XS / S / L",
+      price: "€94,99",
+          image: "c.jpeg"
+    },
+    
 
   ],
 
@@ -29,9 +78,15 @@ const producten = {
       price: "€89,99",
       image: "3.jpeg"
     },
+    {
+      name: "Sporty Sneaker – Wit",
+      size: "43",
+      price: "€99,99",
+      image: "16.jpeg"
+    },
         {
       name: "Low-Top – Bruin/Wit",
-      size: "39 / 45",
+      size: "39 / 41 / 42 / 43 / 44 / 45",
       price: "€139,99",
       image: "5.jpeg"
     },
@@ -77,6 +132,30 @@ const producten = {
       price: "€129,99",
       image: "12.jpeg"
     },
+    {
+      name: "Sporty Sneaker – Blauw",
+      size: "45 1/3",
+      price: "€79,99",
+      image: "17.jpeg"
+    },
+    {
+      name: "Sporty Sneaker – Roze",
+      size: "38",
+      price: "€89,99",
+      image: "18.jpeg"
+    },
+    {
+      name: "Sporty Sneaker – Grijs",
+      size: "43.5",
+      price: "€79,99",
+      image: "14.jpeg"
+    },
+    {
+      name: "High-Top – Zwart",
+      size: "43",
+      price: "€119,99",
+      image: "13.jpeg"
+    },
   ],
 
   accessoires: [
@@ -97,6 +176,24 @@ const producten = {
       size: "One Size",
       price: "€49,99",
       image: "b.jpeg"
+    },
+    {
+      name: "Pet – Zwart",
+      size: "One Size",
+      price: "€39,99",
+      image: "m.jpeg"
+    },
+    {
+      name: "Armband – Zwart",
+      size: "One Size",
+      price: "€59,99",
+      image: "d.jpeg"
+    },
+    {
+      name: "Armband – Zwart",
+      size: "One Size",
+      price: "€59,99",
+      image: "l.jpeg"
     },
     
   ]
