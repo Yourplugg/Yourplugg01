@@ -49,6 +49,30 @@ const producten = {
       price: "€94,99",
           image: "c.jpeg"
     },
+    {
+      name: "Trui – Zwart",
+      size: "S",
+      price: "€84,99",
+          image: "n.jpeg"
+    },
+    {
+      name: "Bodywarmer – Blauw",
+      size: "S",
+      price: "€69,99",
+          image: "e.jpeg"
+    },
+    {
+      name: "Tracksuit – Grijs",
+      size: "L (valt als S)",
+      price: "€89,99",
+          image: "p.jpeg"
+    },
+    {
+      name: "Tracksuit – Blauw",
+      size: "L (valt als M)",
+      price: "€74,99",
+          image: "o.jpeg"
+    },
     
 
   ],
@@ -149,6 +173,30 @@ const producten = {
       size: "43",
       price: "€119,99",
       image: "13.jpeg"
+    },
+    {
+      name: "Slipper – Bruin",
+      size: "37 / 39 / 40",
+      price: "€99,99",
+      image: "22.jpeg"
+    },
+    {
+      name: "Slipper – Bruin",
+      size: "",
+      price: "€99,99",
+      image: "20.jpeg"
+    },
+    {
+      name: "Slipper – Rood",
+      size: "39",
+      price: "€99,99",
+      image: "19.jpeg"
+    },
+    {
+      name: "Slipper – Zwart",
+      size: "37",
+      price: "€99,99",
+      image: "21.jpeg"
     },
   ],
 
