@@ -181,12 +181,6 @@ const producten = {
       image: "22.jpeg"
     },
     {
-      name: "Slipper – Bruin",
-      size: "",
-      price: "€99,99",
-      image: "20.jpeg"
-    },
-    {
       name: "Slipper – Rood",
       size: "39",
       price: "€99,99",
@@ -201,12 +195,6 @@ const producten = {
   ],
 
   accessoires: [
-    {
-      name: "Crossbody bag – Zwart",
-      size: "One Size",
-      price: "€89,99",
-      image: "4.jpeg"
-    },
     {
       name: "Handtassen – Diverse Kleuren",
       size: "One Size",
