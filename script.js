@@ -8,77 +8,221 @@
 const producten = {
   kleding: [
     {
-      name: "Oversized Hoodie – Zwart",
-      size: "S / M / L / XL",
-      price: "€59,99",
-      image: "" // bijv. "images/hoodie-zwart.jpg"
+      name: "Jacket – Zwart",
+      size: "S / M",
+      price: "€84,99",
+          image: "j.jpeg"
     },
     {
-      name: "Cargo Broek – Groen",
-      size: "M / L / XL",
-      price: "€74,99",
-      image: ""
+      name: "Jacket – Blauw",
+      size: "S / M",
+      price: "€84,99",
+          image: "k.jpeg"
     },
     {
-      name: "Graphic Tee – Wit",
-      size: "S / M / L",
-      price: "€29,99",
-      image: ""
+      name: "Jacket – Créme",
+      size: "S / M",
+      price: "€84,99",
+          image: "i.jpeg"
     },
     {
-      name: "Puffer Jacket – Navy",
-      size: "M / L / XL / XXL",
+      name: "Jacket – Zwart",
+      size: "M",
+      price: "€79,99",
+          image: "h.jpeg"
+    },
+    {
+      name: "Trainingspak – Blauw",
+      size: "S",
+      price: "€99,99",
+          image: "g.jpeg"
+    },
+    {
+      name: "Tracksuit – Grijs",
+      size: "S",
       price: "€119,99",
-      image: ""
-    }
+          image: "f.jpeg"
+    },
+    {
+      name: "Vest – Grijs",
+      size: "XS / S / L",
+      price: "€94,99",
+          image: "c.jpeg"
+    },
+    {
+      name: "Trui – Zwart",
+      size: "S",
+      price: "€84,99",
+          image: "n.jpeg"
+    },
+    {
+      name: "Bodywarmer – Blauw",
+      size: "S",
+      price: "€69,99",
+          image: "e.jpeg"
+    },
+    {
+      name: "Tracksuit – Grijs",
+      size: "L (valt als S)",
+      price: "€89,99",
+          image: "p.jpeg"
+    },
+    {
+      name: "Tracksuit – Blauw",
+      size: "L (valt als M)",
+      price: "€74,99",
+          image: "o.jpeg"
+    },
   ],
 
   schoenen: [
+   {
+      name: "Sneaker – Wit/Rood",
+      size: "38",
+      price: "€149,99",
+          image: "1.jpeg"
+    },
     {
-      name: "Chunky Sneaker – Wit/Grijs",
+      name: "Low-Top Suede – Zwart/Wit",
       size: "40 / 41 / 42 / 43 / 44 / 45",
+      price: "€149,99",
+      image: "2.jpeg"
+    },
+    {
+      name: "Sporty Sneaker – Zwart",
+      size: "41",
       price: "€89,99",
-      image: ""
+      image: "3.jpeg"
     },
     {
-      name: "Low-Top Suede – Camel",
-      size: "39 / 40 / 41 / 42 / 43",
+      name: "Sporty Sneaker – Wit",
+      size: "43",
+      price: "€99,99",
+      image: "16.jpeg"
+    },
+        {
+      name: "Low-Top – Bruin/Wit",
+      size: "39 / 41 / 42 / 43 / 44 / 45",
+      price: "€139,99",
+      image: "5.jpeg"
+    },
+    {
+      name: "Sporty Sneaker – Grijs",
+      size: "41.5",
       price: "€79,99",
-      image: ""
+      image: "6.jpeg"
     },
     {
-      name: "High-Top Canvas – Zwart",
-      size: "38 / 39 / 40 / 41 / 42",
-      price: "€64,99",
-      image: ""
-    }
+      name: "Chunky Sneaker – Zwart",
+      size: "40 / 44",
+      price: "€129,99",
+      image: "7.jpeg"
+    },
+    {
+      name: "Sneakers – Blauw/Groen",
+      size: "43 / 42.5",
+      price: "€79,99",
+      image: "8.jpeg"
+    },
+    {
+      name: "Low-Top – Zwart",
+      size: "42",
+      price: "€139,99",
+      image: "9.jpeg"
+    },
+    {
+      name: "Chunky Sneaker – Wit",
+      size: "37 / 38 / 43",
+      price: "€139,99",
+      image: "10.jpeg"
+    },
+    {
+      name: "Sporty Sneaker – Grijs",
+      size: "44",
+      price: "€79,99",
+      image: "11.jpeg"
+    },
+    {
+      name: "Low-Top – Zwart/Wit",
+      size: "43",
+      price: "€129,99",
+      image: "12.jpeg"
+    },
+    {
+      name: "Sporty Sneaker – Blauw",
+      size: "45 1/3",
+      price: "€79,99",
+      image: "17.jpeg"
+    },
+    {
+      name: "Sporty Sneaker – Roze",
+      size: "38",
+      price: "€89,99",
+      image: "18.jpeg"
+    },
+    {
+      name: "Sporty Sneaker – Grijs",
+      size: "43.5",
+      price: "€79,99",
+      image: "14.jpeg"
+    },
+    {
+      name: "High-Top – Zwart",
+      size: "43",
+      price: "€119,99",
+      image: "13.jpeg"
+    },
+    {
+      name: "Slipper – Bruin",
+      size: "37 / 39 / 40",
+      price: "€99,99",
+      image: "22.jpeg"
+    },
+    {
+      name: "Slipper – Rood",
+      size: "39",
+      price: "€99,99",
+      image: "19.jpeg"
+    },
+    {
+      name: "Slipper – Zwart",
+      size: "37",
+      price: "€99,99",
+      image: "21.jpeg"
+    },
   ],
 
   accessoires: [
     {
-      name: "Snapback Cap – Zwart",
+      name: "Handtassen – Diverse Kleuren",
       size: "One Size",
-      price: "€24,99",
-      image: ""
+      price: "€59,99",
+      image: "a.jpeg"
     },
     {
-      name: "Crossbody Bag – Bruin",
+      name: "Petten – Diverse Kleuren",
+      size: "One Size",
+      price: "€49,99",
+      image: "b.jpeg"
+    },
+    {
+      name: "Pet – Zwart",
       size: "One Size",
       price: "€39,99",
-      image: ""
+      image: "m.jpeg"
     },
     {
-      name: "Beanie – Grijs",
+      name: "Armband – Zwart",
       size: "One Size",
-      price: "€19,99",
-      image: ""
+      price: "€59,99",
+      image: "d.jpeg"
     },
     {
-      name: "Bucket Hat – Creme",
-      size: "S/M – L/XL",
-      price: "€22,99",
-      image: ""
-    }
+      name: "Armband – Zwart",
+      size: "One Size",
+      price: "€59,99",
+      image: "l.jpeg"
+    },
   ]
 };
 
