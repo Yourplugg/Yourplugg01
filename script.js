@@ -152,7 +152,7 @@ const producten = {
     },
     {
       name: "Sporty Sneaker – Blauw",
-      size: "45 1/3",
+      size: "45.⅓",
       price: "€79,99",
       image: "17.jpeg"
     },
