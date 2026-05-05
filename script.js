@@ -80,7 +80,7 @@ const producten = {
     },
     {
       name: "Low-Top Suede – Zwart/Wit",
-      size: "40 / 41 / 42 / 43 / 44 / 45",
+      size: "40",
       price: "€149,99",
       image: "2.jpeg"
     },
@@ -128,7 +128,7 @@ const producten = {
     },
     {
       name: "Chunky Sneaker – Wit",
-      size: "37 / 38 / 43",
+      size: "38 / 43",
       price: "€139,99",
       image: "10.jpeg"
     },
