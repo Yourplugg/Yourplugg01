@@ -8,7 +8,7 @@
 const producten = {
   kleding: [
     {
-      name: "Jacketss – Zwart",
+      name: "Jacket – Zwart",
       size: "S / M",
       price: "€84,99",
           image: "j.jpeg"
