@@ -3,6 +3,8 @@
 //  Voeg hier je eigen producten toe of pas bestaande aan.
 //  Elke categorie heeft een eigen array.
 //  image: pad naar jouw afbeelding, bijv. "images/hoodie-zwart.jpg"
+//  sale: true  →  toont een rode SALE badge op de kaart
+//  sale: false →  geen badge (of weglaten)
 // ============================================================
 
 const producten = {
@@ -11,76 +13,77 @@ const producten = {
       name: "Jacket – Zwart",
       size: "S / M",
       price: "€84,99",
-          image: "j.jpeg"
+      image: "j.jpeg",
+      sale: true          // ← SALE badge aan
     },
     {
       name: "Jacket – Blauw",
       size: "S / M",
       price: "€84,99",
-          image: "k.jpeg"
+      image: "k.jpeg"
     },
     {
       name: "Jacket – Créme",
       size: "S / M",
       price: "€84,99",
-          image: "i.jpeg"
+      image: "i.jpeg"
     },
     {
       name: "Jacket – Zwart",
       size: "M",
       price: "€79,99",
-          image: "h.jpeg"
+      image: "h.jpeg"
     },
     {
       name: "Trainingspak – Blauw",
       size: "S",
       price: "€99,99",
-          image: "g.jpeg"
+      image: "g.jpeg"
     },
     {
       name: "Tracksuit – Grijs",
       size: "S",
       price: "€119,99",
-          image: "f.jpeg"
+      image: "f.jpeg"
     },
     {
       name: "Vest – Grijs",
       size: "XS / S / L",
       price: "€94,99",
-          image: "c.jpeg"
+      image: "c.jpeg"
     },
     {
       name: "Trui – Zwart",
       size: "S",
       price: "€84,99",
-          image: "n.jpeg"
+      image: "n.jpeg"
     },
     {
       name: "Bodywarmer – Blauw",
       size: "S",
       price: "€69,99",
-          image: "e.jpeg"
+      image: "e.jpeg"
     },
     {
       name: "Tracksuit – Grijs",
       size: "L (valt als S)",
       price: "€89,99",
-          image: "p.jpeg"
+      image: "p.jpeg"
     },
     {
       name: "Tracksuit – Blauw",
       size: "L (valt als M)",
       price: "€74,99",
-          image: "o.jpeg"
+      image: "o.jpeg"
     },
   ],
 
   schoenen: [
-   {
+    {
       name: "Sneaker – Wit/Rood",
       size: "38",
       price: "€149,99",
-          image: "1.jpeg"
+      image: "1.jpeg"
     },
     {
       name: "Low-Top Suede – Zwart/Wit",
@@ -100,7 +103,7 @@ const producten = {
       price: "€99,99",
       image: "16.jpeg"
     },
-        {
+    {
       name: "Low-Top – Bruin/Wit",
       size: "39 / 41 / 42 / 43 / 44 / 45",
       price: "€139,99",
@@ -239,10 +242,96 @@ const producten = {
 };
 
 // ============================================================
+//  MAATFILTER HELPERS
+// ============================================================
+
+// Haal alle unieke maatwaarden op uit een categorie
+function haalMatenOp(categorie) {
+  const matenSet = new Set();
+  producten[categorie].forEach(product => {
+    // Splits bijv. "40 / 41 / 42" op de slash
+    product.size.split("/").forEach(m => {
+      const maat = m.trim();
+      if (maat) matenSet.add(maat);
+    });
+  });
+  // Sorteer: cijfers numeriek, tekst alfabetisch
+  return [...matenSet].sort((a, b) => {
+    const nA = parseFloat(a), nB = parseFloat(b);
+    if (!isNaN(nA) && !isNaN(nB)) return nA - nB;
+    return a.localeCompare(b);
+  });
+}
+
+// Controleer of een product een bepaalde maat heeft
+function heeftMaat(product, maat) {
+  if (!maat) return true;
+  return product.size.split("/").map(m => m.trim()).includes(maat);
+}
+
+// Bouw de maatfilter knoppen voor een categorie
+function maakMaatFilter(categorie, gridId) {
+  const maten = haalMatenOp(categorie);
+  if (maten.length === 0) return;
+
+  const sectie = document.getElementById(categorie);
+  if (!sectie) return;
+
+  // Verwijder eventuele bestaande filter
+  const bestaand = sectie.querySelector(".maat-filter");
+  if (bestaand) bestaand.remove();
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "maat-filter";
+
+  const label = document.createElement("span");
+  label.className = "maat-filter-label";
+  label.textContent = "Filter op maat:";
+  wrapper.appendChild(label);
+
+  // "Alle" knop
+  const alleKnop = document.createElement("button");
+  alleKnop.className = "maat-knop active";
+  alleKnop.textContent = "Alle";
+  alleKnop.dataset.maat = "";
+  wrapper.appendChild(alleKnop);
+
+  maten.forEach(maat => {
+    const knop = document.createElement("button");
+    knop.className = "maat-knop";
+    knop.textContent = maat;
+    knop.dataset.maat = maat;
+    wrapper.appendChild(knop);
+  });
+
+  // Voeg filter in vóór de grid
+  const grid = document.getElementById(gridId);
+  sectie.insertBefore(wrapper, grid);
+
+  // Klik event op de filter knoppen
+  wrapper.addEventListener("click", (e) => {
+    const knop = e.target.closest(".maat-knop");
+    if (!knop) return;
+
+    wrapper.querySelectorAll(".maat-knop").forEach(k => k.classList.remove("active"));
+    knop.classList.add("active");
+
+    const gekozenMaat = knop.dataset.maat;
+
+    // Toon/verberg kaarten
+    grid.querySelectorAll(".product-card").forEach(card => {
+      const maat = card.dataset.size || "";
+      const zichtbaar = heeftMaat({ size: maat }, gekozenMaat);
+      card.style.display = zichtbaar ? "" : "none";
+    });
+  });
+}
+
+// ============================================================
 //  RENDERING
 // ============================================================
 
-const WHATSAPP_NUMMER = "31624516879"; // zonder + of spaties
+const WHATSAPP_NUMMER = "31624516879";
 
 function maakWhatsAppLink(product) {
   const tekst = encodeURIComponent(
@@ -275,6 +364,7 @@ function sluitLightbox() {
 function maakProductCard(product) {
   const card = document.createElement("div");
   card.className = "product-card";
+  card.dataset.size = product.size; // nodig voor maatfilter
 
   const heeftFoto = Boolean(product.image);
 
@@ -288,10 +378,16 @@ function maakProductCard(product) {
       </span>`
     : "";
 
+  // Sale badge — alleen zichtbaar als sale: true
+  const saleBadge = product.sale
+    ? `<span class="sale-badge">SALE</span>`
+    : "";
+
   card.innerHTML = `
     <div class="product-image-wrap">
       ${imageHTML}
       ${vergrootIcoon}
+      ${saleBadge}
     </div>
     <div class="product-info">
       <p class="product-name">${product.name}</p>
@@ -341,6 +437,10 @@ function laadCatalogus() {
       grid.appendChild(maakProductCard(product));
     });
   }
+
+  // Maatfilter toevoegen voor kleding en schoenen
+  maakMaatFilter("kleding", "kleding-grid");
+  maakMaatFilter("schoenen", "schoenen-grid");
 }
 
 // Sluit lightbox bij klik buiten de foto
@@ -369,11 +469,9 @@ document.addEventListener("DOMContentLoaded", () => {
     knop.addEventListener("click", () => {
       const doel = knop.dataset.cat;
 
-      // Knoppen updaten
       knoppen.forEach(k => k.classList.remove("active"));
       knop.classList.add("active");
 
-      // Secties updaten
       secties.forEach(s => {
         s.classList.remove("active");
         if (s.id === doel) s.classList.add("active");

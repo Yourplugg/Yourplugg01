@@ -447,3 +447,67 @@ main {
     padding: 40px 16px 80px;
   }
 }
+
+/* ===========================
+   SALE BADGE
+=========================== */
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #e63946;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: 5px;
+  z-index: 3;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(230, 57, 70, 0.45);
+}
+
+/* ===========================
+   MAATFILTER
+=========================== */
+.maat-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.maat-filter-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-right: 4px;
+}
+
+.maat-knop {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.maat-knop:hover {
+  color: var(--text-primary);
+  border-color: var(--text-muted);
+}
+
+.maat-knop.active {
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+}
