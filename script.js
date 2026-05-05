@@ -190,6 +190,18 @@ const producten = {
       price: "€99,99",
       image: "21.jpeg"
     },
+    {
+      name: "Low-Top Suede – Bruin",
+      size: "42 / 46",
+      price: "€149,99",
+      image: "23.jpeg"
+    },
+    {
+      name: "High-Top – Zwart/Wit",
+      size: "41 / 46",
+      price: "€149,99",
+      image: "24.jpeg"
+    },
   ],
 
   accessoires: [
