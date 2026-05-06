@@ -61,12 +61,6 @@ const producten = {
       image: "e.jpeg"
     },
     {
-      name: "Tracksuit – Grijs",
-      size: "L (valt als S)",
-      price: "€89,99",
-      image: "p.jpeg"
-    },
-    {
       name: "Tracksuit – Blauw",
       size: "L (valt als M)",
       price: "€74,99",
