@@ -503,19 +503,26 @@ main {
 /* ===========================
    SALE BADGE
 =========================== */
-.sale-badge {
+.badge-wrapper {
   position: absolute;
   top: 10px;
   left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.sale-badge {
   background: #e63946;
   color: #fff;
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 0.08em;
   padding: 3px 10px;
   border-radius: 5px;
-  z-index: 3;
-  pointer-events: none;
   box-shadow: 0 2px 8px rgba(230, 57, 70, 0.45);
 }
 
@@ -616,9 +623,6 @@ main {
 }
 
 .nieuw-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
   background: var(--accent);
   color: var(--bg);
   font-family: var(--font-display);
@@ -626,8 +630,6 @@ main {
   letter-spacing: 0.08em;
   padding: 3px 10px;
   border-radius: 5px;
-  z-index: 3;
-  pointer-events: none;
 }
 
 /* ===========================
@@ -838,4 +840,24 @@ footer {
   .nieuw-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* ===========================
+   SALE TAB KNOP
+=========================== */
+.cat-btn.sale-tab {
+  color: #e63946;
+  border-color: #e63946;
+}
+
+.cat-btn.sale-tab:hover {
+  color: #fff;
+  background: #e63946;
+  border-color: #e63946;
+}
+
+.cat-btn.sale-tab.active {
+  color: #fff;
+  background: #e63946;
+  border-color: #e63946;
 }

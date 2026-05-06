@@ -10,7 +10,9 @@ const producten = {
       name: "Jacket – Zwart",
       size: "S / M",
       price: "€84,99",
-      image: "j.jpeg"
+      image: "j.jpeg",
+      sale: true,
+      nieuw: true
     },
     {
       name: "Jacket – Blauw",
@@ -403,13 +405,15 @@ function maakProductCard(product, toonNieuwBadge = false) {
 
   const saleBadge = product.sale ? `<span class="sale-badge">SALE</span>` : "";
   const nieuwBadge = (toonNieuwBadge && product.nieuw) ? `<span class="nieuw-badge">NIEUW</span>` : "";
+  const badgeWrapper = (product.sale || (toonNieuwBadge && product.nieuw))
+    ? `<div class="badge-wrapper">${nieuwBadge}${saleBadge}</div>`
+    : "";
 
   card.innerHTML = `
     <div class="product-image-wrap">
       ${imageHTML}
       ${vergrootIcoon}
-      ${saleBadge}
-      ${nieuwBadge}
+      ${badgeWrapper}
     </div>
     <div class="product-info">
       <p class="product-name">${product.name}</p>
@@ -512,27 +516,72 @@ function laadCatalogus() {
 }
 
 // ============================================================
+//  SALE CATEGORIE
+// ============================================================
+
+function voegSaleCategorieToe() {
+  // Verzamel alle sale producten uit alle categorieën
+  const saleItems = [];
+  Object.values(producten).forEach(cat => {
+    cat.forEach(product => {
+      if (product.sale) saleItems.push(product);
+    });
+  });
+
+  // Geen sale producten = geen tab tonen
+  if (saleItems.length === 0) return;
+
+  // Tab knop toevoegen aan de nav
+  const nav = document.querySelector(".cat-nav");
+  const saleKnop = document.createElement("button");
+  saleKnop.className = "cat-btn sale-tab";
+  saleKnop.dataset.cat = "sale";
+  saleKnop.textContent = "Sale";
+  nav.appendChild(saleKnop);
+
+  // Sectie toevoegen aan de wrapper
+  const wrapper = document.querySelector(".categories-wrapper");
+  const sectie = document.createElement("section");
+  sectie.className = "category";
+  sectie.id = "sale";
+  const grid = document.createElement("div");
+  grid.className = "product-grid";
+  grid.id = "sale-grid";
+  sectie.appendChild(grid);
+  wrapper.appendChild(sectie);
+
+  // Producten vullen — toon nieuw-badge ook hier
+  saleItems.forEach(product => {
+    grid.appendChild(maakProductCard(product, true));
+  });
+}
+
+// ============================================================
 //  INIT
 // ============================================================
 
 document.addEventListener("DOMContentLoaded", () => {
   laadNieuwBinnen();
   laadCatalogus();
+  voegSaleCategorieToe();
 
-  // Tab switching
-  const knoppen = document.querySelectorAll(".cat-btn");
-  const secties = document.querySelectorAll(".category");
-  knoppen.forEach(knop => {
-    knop.addEventListener("click", () => {
-      const doel = knop.dataset.cat;
-      knoppen.forEach(k => k.classList.remove("active"));
-      knop.classList.add("active");
-      secties.forEach(s => {
-        s.classList.remove("active");
-        if (s.id === doel) s.classList.add("active");
+  // Tab switching (opnieuw queryselecten na eventuele SALE toevoeging)
+  function activeerTabs() {
+    const knoppen = document.querySelectorAll(".cat-btn");
+    const secties = document.querySelectorAll(".category");
+    knoppen.forEach(knop => {
+      knop.addEventListener("click", () => {
+        const doel = knop.dataset.cat;
+        knoppen.forEach(k => k.classList.remove("active"));
+        knop.classList.add("active");
+        secties.forEach(s => {
+          s.classList.remove("active");
+          if (s.id === doel) s.classList.add("active");
+        });
       });
     });
-  });
+  }
+  activeerTabs();
 
   // Lightbox sluiten
   const overlay = document.getElementById("lightbox-overlay");
