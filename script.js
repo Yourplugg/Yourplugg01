@@ -10,9 +10,7 @@ const producten = {
       name: "Jacket – Zwart",
       size: "S / M",
       price: "€84,99",
-      image: "j.jpeg",
-      sale: true,
-      nieuw: true
+      image: "j.jpeg"
     },
     {
       name: "Jacket – Blauw",
