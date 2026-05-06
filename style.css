@@ -47,6 +47,7 @@ header {
   align-items: center;
   padding: 60px 20px 40px;
   position: relative;
+  flex-wrap: wrap;
 }
 
 header::after {
@@ -429,6 +430,57 @@ main {
    RESPONSIVE
 =========================== */
 @media (max-width: 600px) {
+  /* Header: titel boven, contact eronder gecentreerd */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 20px 32px;
+    gap: 20px;
+  }
+
+  header::after {
+    display: none;
+  }
+
+  .brand {
+    order: 1;
+    font-size: clamp(44px, 16vw, 72px);
+  }
+
+  .header-contact {
+    order: 2;
+    position: static;
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 24px;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .contact-label {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .contact-item {
+    font-size: 13px;
+    justify-content: center;
+  }
+
+  /* Scheidingslijn onder header terug op mobiel */
+  .header-contact::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin: 4px auto 0;
+  }
+
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
@@ -444,7 +496,7 @@ main {
   }
 
   main {
-    padding: 40px 16px 80px;
+    padding: 24px 16px 80px;
   }
 }
 
