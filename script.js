@@ -10,9 +10,7 @@ const producten = {
       name: "Jacket – Zwart",
       size: "S / M",
       price: "€84,99",
-      image: "j.jpeg",
-      sale: true,
-      nieuw: true
+      image: "j.jpeg"
     },
     {
       name: "Jacket – Blauw",
@@ -195,13 +193,15 @@ const producten = {
       name: "Low-Top Suede – Bruin",
       size: "42 / 46",
       price: "€149,99",
-      image: "23.jpeg"
+      image: "23.jpeg",
+      nieuw : true
     },
     {
       name: "High-Top – Zwart/Wit",
       size: "41 / 46",
       price: "€149,99",
-      image: "24.jpeg"
+      image: "24.jpeg",
+      nieuw : true
     },
   ],
 
