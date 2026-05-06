@@ -201,8 +201,7 @@ const producten = {
       size: "41 / 46",
       price: "€149,99",
       image: "24.jpeg",
-      nieuw : true,
-      sale : true
+      nieuw : true
     },
   ],
 
