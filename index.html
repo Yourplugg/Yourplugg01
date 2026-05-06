@@ -29,11 +29,17 @@
     <h1 class="brand">YourPlugg</h1>
   </header>
 
-  <!-- CATALOGUS -->
   <main>
+
+    <!-- NIEUW BINNEN -->
+    <section id="nieuw-binnen-sectie">
+      <h2 class="section-title"><span class="nieuw-dot"></span>Nieuw Binnen</h2>
+      <div class="nieuw-grid" id="nieuw-grid"></div>
+    </section>
+
+    <!-- CATALOGUS -->
     <h2 class="catalogue-title">Catalogus</h2>
 
-    <!-- CATEGORIE TABS -->
     <nav class="cat-nav">
       <button class="cat-btn active" data-cat="kleding">Kleding</button>
       <button class="cat-btn" data-cat="schoenen">Schoenen</button>
@@ -41,24 +47,57 @@
     </nav>
 
     <div class="categories-wrapper">
-
-      <!-- KLEDING -->
       <section class="category active" id="kleding">
         <div class="product-grid" id="kleding-grid"></div>
       </section>
-
-      <!-- SCHOENEN -->
       <section class="category" id="schoenen">
         <div class="product-grid" id="schoenen-grid"></div>
       </section>
-
-      <!-- ACCESSOIRES -->
       <section class="category" id="accessoires">
         <div class="product-grid" id="accessoires-grid"></div>
       </section>
-
     </div>
+
+    <!-- OVER ONS -->
+    <section class="over-ons" id="over-ons">
+      <h2 class="section-title">Over YourPlugg</h2>
+      <div class="over-ons-inhoud">
+        <div class="over-ons-blok">
+          <div class="over-ons-icoon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Wie zijn wij</h3>
+          <p>YourPlugg is jouw go-to voor de nieuwste streetwear, sneakers en accessoires. Wij selecteren alleen de stukken die echt opvallen — kwaliteit en stijl staan bij ons voorop.</p>
+        </div>
+        <div class="over-ons-blok">
+          <div class="over-ons-icoon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3>Hoe bestellen</h3>
+          <p>Stuur ons een berichtje via WhatsApp, Instagram of TikTok met het product dat je wil. Wij regelen de rest — snel, makkelijk en persoonlijk.</p>
+        </div>
+        <div class="over-ons-blok">
+          <div class="over-ons-icoon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Levertijd</h3>
+          <p>Na bevestiging van je bestelling streven wij naar een snelle levering. We houden je op de hoogte via het platform waar je besteld hebt.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-brand">YourPlugg</p>
+    <div class="footer-links">
+      <a href="https://instagram.com/your.plugg01" target="_blank">Instagram</a>
+      <a href="https://tiktok.com/@your.plugg01" target="_blank">TikTok</a>
+      <a href="tel:+31624516879">+31 6 245 16 879</a>
+    </div>
+    <p class="footer-copy">© 2025 YourPlugg. Alle rechten voorbehouden.</p>
+  </footer>
 
   <!-- LIGHTBOX -->
   <div id="lightbox-overlay" class="lightbox-overlay">
@@ -68,6 +107,11 @@
       <p id="lightbox-caption"></p>
     </div>
   </div>
+
+  <!-- TERUG NAAR BOVEN -->
+  <button id="top-knop" title="Terug naar boven" onclick="scrollNaarBoven()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
 
   <script src="script.js"></script>
 </body>
