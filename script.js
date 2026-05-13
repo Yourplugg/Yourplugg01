@@ -197,6 +197,13 @@ const producten = {
       image: "24.jpeg",
       nieuw : true
     },
+    {
+      name: "High-Top – Wit/Grijs",
+      size: "42",
+      price: "€149,99",
+      image: "25.jpeg",
+      nieuw : true
+    },
   ],
 
   accessoires: [
